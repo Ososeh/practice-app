@@ -1,8 +1,8 @@
 //import { useState } from "react";
 //import Modal from "./components/Modal";
 import "./App.css";
-import ServiceCard from "./components/ServiceCard";
-
+//import ServiceCard from "./components/ServiceCard";
+import Counter from "./components/Counter";
 
 function App() {
   /* const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,9 +12,9 @@ function App() {
   function toggleModal() {
     setIsModalOpen((previousState) => !previousState);
   } */
-  <br/>
+  <br />;
   // Array containing the information for all technology services.
-  const services = [
+  /* const services = [
     {
       id: 1,
       title: "Cloud Engineering",
@@ -52,55 +52,14 @@ function App() {
     },
   ];
 
+
   function handleServiceSelection(serviceTitle) {
     alert(`${serviceTitle} selected`);
-  }
+  } */
 
   return (
-   /*  <main>
-      <h1>Reusable Modal Example</h1>
-
-      <button
-        type="button"
-        className="modal-toggle-button"
-        onClick={toggleModal}
-      >
-        {isModalOpen ? "Close Modal" : "Open Modal"}
-      </button>
-
-      <Modal
-        isOpen={isModalOpen}
-        title="Product Information"
-        onClose={toggleModal}
-      >
-        <p>HP Laptop</p>
-        <p>Category: Computers</p>
-        <p>Price: ₦450,000</p>
-      </Modal>
-    </main> */
-    
     <main className="app">
-      <section className="services-section">
-        <h1>Our Technology Services</h1>
-
-        <p className="services-introduction">
-          Explore the technology solutions and training programmes we provide.
-        </p>
-
-        <div className="services-grid">
-          {services.map((service) => (
-            <ServiceCard
-              key={service.id}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              buttonText={service.buttonText}
-              isAvailable={service.isAvailable}
-              onSelect={() => handleServiceSelection(service.title)}
-            />
-          ))}
-        </div>
-      </section>
+      <Counter />
     </main>
   );
 }
